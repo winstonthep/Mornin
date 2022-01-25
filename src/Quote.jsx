@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Quote = (props) => {
+const Quote = () => {
   const [ dayQuote, setDayQuote ] = useState('');
   const [ dayPerson, setDayPerson ] = useState('');
 
@@ -11,7 +11,6 @@ const Quote = (props) => {
     .then((response) => {
       setDayQuote(response.data[0].q);
       setDayPerson(response.data[0].a);
-      console.log(response);
     })
     .catch((error) => {
       console.error('GET Quote Error:', error)
@@ -20,6 +19,7 @@ const Quote = (props) => {
   useEffect(() => {
     retrieveQuote();
   }, []);
+
   return (
     <blockquote>&ldquo;{dayQuote}&rdquo; &mdash; <footer>{dayPerson}</footer></blockquote>
   )

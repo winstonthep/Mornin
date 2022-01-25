@@ -42,9 +42,7 @@ INSERT INTO cities(city, state, latitude, longitude) VALUES('Raleigh', 'NC', 35.
 INSERT INTO news(name, url) VALUES ('The New York Times', 'https://www.nytimes.com'),
 ('Los Angeles Times', 'https://www.latimes.com'),
 ('The Washington Post', 'https://www.washingtonpost.com'),
-('The New York Times', 'https://www.nytimes.com'),
 ('The Wall Street Journal', 'https://www.wsj.com'),
-('The New York Times', 'https://www.nytimes.com'),
 ('CNN', 'https://www.cnn.com'),
 ('Fox News', 'https://www.foxnews.com');
 
