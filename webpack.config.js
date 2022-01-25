@@ -52,7 +52,14 @@ const config = {
         include: /\.module\.css$/
       }
     ]
-  }
+  },
+  plugins: [
+    // fix "process is not defined" error:
+    // (do "npm install process" before running the build)
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+    }),
+  ]
 };
 
 module.exports = config;
