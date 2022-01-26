@@ -11,14 +11,14 @@ const WeatherBreakdown = ({today, tonight}) => {
         <div>Today<br></br>
           <img src={today.icon}></img>
           <div>{today.shortForecast}</div>
-          <div>Temp: {today.temperature}</div>
+          <div>Temp: {today.temperature}&#176;F</div>
           <div>Wind Speed: {today.windSpeed}</div>
           <div>Wind Direction: {today.windDirection}</div>
         </div>
         <div>Tonight<br></br>
           <img src={tonight.icon}></img>
           <div>{tonight.shortForecast}</div>
-          <div>Temp: {tonight.temperature}</div>
+          <div>Temp: {tonight.temperature}&#176;F</div>
           <div>Wind Speed: {tonight.windSpeed}</div>
           <div>Wind Direction: {tonight.windDirection}</div>
         </div>

@@ -23,7 +23,6 @@ const weatherRetriever = (latitude, longitude, callback) => {
       'User-Agent': 'winstonspantelakos@gmail.com'
     }
   };
-  console.log('OPTIONS URL:', options.url);
     axios.get( options.url, options.headers)
     .then((response) => {
       // callback(undefined, response.data.properties.forecast);
@@ -44,7 +43,6 @@ const forecastRetriever = (url, callback) => {
   };
     axios.get( options.url, options.headers)
     .then((response) => {
-      console.log(response.data.properties.periods);
       callback(undefined, response.data.properties.periods);
     })
     .catch((error) => {

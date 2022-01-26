@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 const port = 3070
 const { quoteHelper, weatherRetriever }  = require('./helpers.js');
-const { getNews, getGames, getCityInfo } = require('./models.js');
+const { getNews, getGames, getCityInfo, getTodos, addTodo, updateTodo } = require('./models.js');
 
 let cors = require('cors')
 app.use(cors());
@@ -57,6 +57,37 @@ app.get('/weather', (req, res) => {
 
 app.get('/cities', (req, res) => {
   getCityInfo((err, result) => {
+    if (err) {
+      res.status(400).end();
+    } else {
+      res.send(result);
+    }
+  });
+})
+
+app.get('/todos', (req, res) => {
+  getTodos((err, result) => {
+    if (err) {
+      res.status(400).end();
+    } else {
+      res.send(result);
+    }
+  });
+})
+
+app.post('/newtodo', (req, res) => {
+  addTodo(req.body.user, req.body.todo, (err, result) => {
+    if (err) {
+      res.status(400).end();
+    } else {
+      res.send(result);
+    }
+  });
+});
+
+app.put('/updatetodo', (req, res) => {
+  console.log('put req:', req.body);
+  updateTodo(req.body.id, (err, result) => {
     if (err) {
       res.status(400).end();
     } else {

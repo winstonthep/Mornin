@@ -16,12 +16,20 @@ CREATE TABLE news (
   url TEXT NOT NULL
 );
 
+CREATE TABLE todos (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  username TEXT NOT NULL,
+  note TEXT NOT NULL,
+  done BOOLEAN
+);
+
 CREATE TABLE games (
   id INT PRIMARY KEY AUTO_INCREMENT,
   name TEXT NOT NULL,
   url TEXT NOT NULL
 );
 
+INSERT INTO todos(username, note, done) VALUES('winstonp', 'So so so many lines of code to write', false);
 INSERT INTO cities(city, state, latitude, longitude) VALUES('Raleigh', 'NC', 35.7796, -78.6382 ),
 ('New York City', 'NY', 40.7128, -74.0060 ),
 ('Los Angeles', 'CA', 34.0522, -118.2437 ),
