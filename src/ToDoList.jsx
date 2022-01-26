@@ -26,7 +26,8 @@ const ToDoList = () => {
 
     return (
       <>
-        <ul>
+        <h2 className="todoheader">To-Do List</h2>
+        <ul className="todolist">
           {todos.map((todo, i) => (
               <ToDoItem todo={todo} />
           ))}

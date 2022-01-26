@@ -3,10 +3,11 @@ import CityDropdown from './CityDropdown.jsx';
 import WeatherBreakdown from './WeatherBreakdown.jsx';
 import axios from 'axios';
 
-const Weather = () => {
+const Weather = ( {capture} ) => {
   const [ cityList, setCityList ] = useState([{id: 1, city: 'Raleigh', state: 'NC', latitude: '35.77960', longitude: '-78.63820'}]);
   const [ selectedCity, setSelectedCity ] = useState(1);
   const [ selectedForecast, setSelectedForecast] = useState([]);
+
   const retrieveCities = () => {
     axios.get('/cities')
     .then((response) => {
@@ -17,6 +18,7 @@ const Weather = () => {
       console.error('GET Cities Error:', error)
     })
   };
+
   const handleChange = (e) => {
     let newCity = e.target.value;
     let changeWeather = () => {
@@ -50,6 +52,7 @@ const Weather = () => {
       .then((response) => {
         console.log(response.data)
         setSelectedForecast(response.data.slice(0, 2))
+        capture(response.data[0]);
       })
       .catch((error) => {
         console.error('Weather Retrieval Error:', error);
@@ -61,10 +64,15 @@ const Weather = () => {
   }, [selectedCity]);
 
   return (
-    <div>
-      <CityDropdown selectedCity={selectedCity} cities={cityList} change={handleChange}/>
-      <WeatherBreakdown today={selectedForecast[0]} tonight={selectedForecast[1]}/>
-    </div>
+    <>
+      <h2 id="weatherheader">Today's Weather</h2>
+      <div className="dropdown">
+        <CityDropdown selectedCity={selectedCity} cities={cityList} change={handleChange}/>
+      </div>
+      <div className="breakdown">
+        <WeatherBreakdown today={selectedForecast[0]} tonight={selectedForecast[1]}/>
+      </div>
+    </>
   )
 }
 

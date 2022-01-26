@@ -32,13 +32,13 @@ Once the project moves into development, the press release can be used as a touc
   > Mornin seeks to equip its users with all the necessary information to get the day going on a positive, productive note.
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+  > Start your day off with Mornin and I promise you won't look back.
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  > Just visit the website and you can start using immediately!
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  > Mornin has changed my life and given me the structure in the morning I didn't even know I needed! It's also nice knowing what kind of clothes I should wear today.
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+  > Thank you for taking time to learn more about Mornin today. If you'd like to check it out, please visit the website and let us know what you think! We are always looking how to best serve our users!

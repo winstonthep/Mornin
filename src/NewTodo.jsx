@@ -32,16 +32,18 @@ const NewTodo = (props) => {
   }
 
     return (
-      <form onSubmit={handleSubmit}>
+    <form className="todoform" onSubmit={handleSubmit}>
       <label>
-        Username:
-        <input type="text" name='username' value={newUser} onChange={handleChange} /> <br></br>
+        <span>Username:    </span>
+        <input type="text" name='username' value={newUser} onChange={handleChange} /> <br></br> <br></br>
       </label>
       <label>
-        New To-Do:
-        <input type="text" name="todo" value={newTodo} onChange={handleChange} /><br></br>
+        <span>New To-Do:    </span>
+        <input type="text" name="todo" value={newTodo} onChange={handleChange} /><br></br><br></br>
       </label>
-      <input type="submit" value="Submit" />
+      <div id="todosubmit">
+        <input type="submit" id="submit" value="Add a To-Do" />
+      </div>
     </form>
     )
 }

@@ -21,7 +21,7 @@ const Quote = () => {
   }, []);
 
   return (
-    <blockquote>&ldquo;{dayQuote}&rdquo; &mdash; <footer>{dayPerson}</footer></blockquote>
+   <h2><blockquote>&ldquo;{dayQuote}&rdquo; <footer><br></br>&mdash;  {dayPerson}</footer></blockquote></h2>
   )
 }
 

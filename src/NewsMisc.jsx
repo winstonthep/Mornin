@@ -30,16 +30,19 @@ const NewsMisc = () => {
 
   return (
     <>
-      <ul> News
-        {newsList.map((news, i) => (
-          <li key={news.name + i}><a href={news.url}>{news.name}</a></li>
-        ))}
-      </ul>
-      <ul> Games
-        {gamesList.map((game, i) => (
-          <li key={game.name + i}><a href={game.url}>{game.name}</a></li>
-        ))}
-      </ul>
+      <h2 id="newsmischeader">News & Games</h2>
+      <div className="newsgames">
+        <ul className="news"> <h3>News</h3>
+          {newsList.map((news, i) => (
+            <li className="links" key={news.name + i}><a className="links" href={news.url}>{news.name}</a></li>
+          ))}
+        </ul>
+        <ul className="games"> <h3>Games</h3>
+          {gamesList.map((game, i) => (
+            <li className="links" key={game.name + i}><a className="links" href={game.url}>{game.name}</a></li>
+          ))}
+        </ul>
+      </div>
     </>
   )
 }
