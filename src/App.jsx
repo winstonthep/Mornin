@@ -14,7 +14,7 @@ const App = ({ name }) => {
   return (
     <>
       <h1>
-        Mornin!
+        Mornin {name}!
       </h1>
       <div className="mornintop">
         <div className="wear">
