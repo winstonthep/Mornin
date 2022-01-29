@@ -1,4 +1,4 @@
-# Mornin! #
+# Mornin! (Please note this is a basic MVP and is a WIP) #
 
 <!--
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -35,7 +35,7 @@ Once the project moves into development, the press release can be used as a touc
   > Start your day off with Mornin and I promise you won't look back.
 
 ## How to Get Started ##
-  > Just visit the website and you can start using immediately!
+  > Just visit the website (once deployed) and you can start using immediately!
 
 ## Customer Quote ##
   > Mornin has changed my life and given me the structure in the morning I didn't even know I needed! It's also nice knowing what kind of clothes I should wear today.
